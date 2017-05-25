@@ -4,5 +4,6 @@
         Description: <%=  danimal.description %><br>
         Species: <%=  danimal.species %><br>
         Legs: <%=  danimal.leg_count %><br>
+        <%= button_to "Delete", danimal, method: :delete %>
     </div>
 <% end %>

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # get '/danimals/:id' => 'danimals#show'
   # get '/danimals/:id/edit' => 'danimals#edit'
   # patch '/danimals/:id' => 'danimals#update'
-  resources :danimals, only: [:index, :new, :create, :show, :edit, :update]
+  # delete '/danimals/:id' => 'danimals#destroy'
+  resources :danimals
+  # , only: [:index, :new, :create, :show, :edit, :update, :destroy]
 
 end

@@ -44,4 +44,14 @@ class DanimalsController < ApplicationController
     # ^ same as redirect_to "/danimals/#{danimal.id}"
   end
 
+  def destroy
+    # find the danimal to delete by id
+    danimal = Danimal.find(params[:id])
+    # destroy the danimal
+    danimal.destroy
+    # redirect to danimals index
+    redirect_to danimals_path
+    # ^ same as redirect_to "/danimals"
+  end
+
 end
