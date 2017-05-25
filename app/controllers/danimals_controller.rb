@@ -23,4 +23,25 @@ class DanimalsController < ApplicationController
     @danimal = Danimal.find(params[:id])
   end
 
+  def edit
+    # look up the danimal by id and save to an instance variable
+    @danimal = Danimal.find(params[:id])
+  end
+
+  def update
+    # find the danimal to update by id
+    danimal = Danimal.find(params[:id])
+    #update danimal
+    danimal.update(
+      name: params[:name],
+      description: params[:description],
+      species: params[:species],
+      leg_count: params[:leg_count]
+      )
+    # redirect to single danimal show page for this danimal
+    redirect_to danimal
+    # ^ same as redirect_to danimal_path(danimal)
+    # ^ same as redirect_to "/danimals/#{danimal.id}"
+  end
+
 end
