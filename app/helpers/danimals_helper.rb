@@ -1,0 +1,2 @@
+module DanimalsHelper
+end

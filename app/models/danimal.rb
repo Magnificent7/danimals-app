@@ -1,0 +1,2 @@
+class Danimal < ApplicationRecord
+end
